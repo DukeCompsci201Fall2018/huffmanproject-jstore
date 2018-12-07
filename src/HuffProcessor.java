@@ -64,7 +64,7 @@ public class HuffProcessor {
 				break;
 			}
 			else {
-				arr[BITS_PER_WORD]++;
+				arr[read]++;
 			}
 			arr[PSEUDO_EOF] = 1;
 		}
