@@ -131,10 +131,7 @@ public class HuffProcessor {
 			}
 			else {
 				String code = c[bits];
-				if(code == null || o == null) {
-					break;
-				}
-				o.writeBits(c.length, Integer.parseInt(code, 2));
+				o.writeBits(code.length(), Integer.parseInt(code, 2));
 			}
 		}
 	}
