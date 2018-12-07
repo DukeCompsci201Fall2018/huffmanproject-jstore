@@ -113,7 +113,7 @@ public class HuffProcessor {
 		HuffNode current = r; 
 		while(true) {
 			if(current.myLeft != null || current.myRight != null) {
-				o.writeBits(0, 0); //check
+				o.writeBits(1, 0); 
 				writeHeader(current.myLeft, o);
 				writeHeader(current.myRight, o);
 			}
