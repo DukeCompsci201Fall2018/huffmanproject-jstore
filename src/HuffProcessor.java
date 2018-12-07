@@ -110,7 +110,7 @@ public class HuffProcessor {
 	}
 	
 	private void writeHeader(HuffNode current, BitOutputStream o) {
-		if(r == null) return;
+		if(current == null) return;
 		while(true) {
 			if(current.myLeft != null || current.myRight != null) {
 				o.writeBits(1, 0); 
