@@ -132,7 +132,7 @@ public class HuffProcessor {
 			}
 			else {
 				String code = c[BITS_PER_WORD];
-				if(code == null || out == null) {
+				if(code == null || o == null) {
 					break;
 				}
 				o.writeBits(c.length, Integer.parseInt(code, 2));
