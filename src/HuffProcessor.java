@@ -111,7 +111,6 @@ public class HuffProcessor {
 	
 	private void writeHeader(HuffNode current, BitOutputStream o) {
 		if(current == null) return;
-		while(true) {
 			if(current.myLeft != null || current.myRight != null) {
 				o.writeBits(1, 0); 
 				writeHeader(current.myLeft, o);
@@ -121,7 +120,6 @@ public class HuffProcessor {
 				o.writeBits(1, 1);
 				o.writeBits(BITS_PER_WORD + 1, current.myValue);
 			}
-		}
 	}
 	
 	private void writeCompressedBits(String[] c, BitInputStream in, BitOutputStream o) {
