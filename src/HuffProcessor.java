@@ -59,7 +59,7 @@ public class HuffProcessor {
 	private int[] readForCounts(BitInputStream inn) {
 		int[] arr = new int[ALPH_SIZE + 1];
 		while(true) {
-			int read = inn.readBits(1);
+			int read = inn.readBits(BITS_PER_WORD);
 			if(read == -1) {
 				break;
 			}
